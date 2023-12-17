@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+        <title>DOM Challenge Index</title>
+</head>
+
+<body>
+   <ul>
+
+
+   </ul>
+
+   <button>Create TODO</button>
+   <button>Remove TODO</button>
+   <button>Change Priority</button>
+
+
+   <script>
+    // Get the body of the document
+    let body = document.getElementsByTagName('body');
+   
+    let currentDate = new Date();
+    let dueDate = new Date();
+
+    dueDate.setDate(dueDate.getDate() + 7); // Set the due date to be one week from now
+    console.log('Today\'s Date is ' + currentDate);
+    console.log(dueDate);
+
+    //Create the h1 as a variable
+    let h1 = document.createElement('h1');
+    //Add content to toDoHeader
+    h1.textContent = 'TODO List';
+    h1.id = 'toDoHeader';
+    //Add toDoHeader to the body section
+    document.body.appendChild(h1);
+
+    let h2 = document.createElement('h2');
+    h2.textContent = 'Due: ' + dueDate.toLocaleDateString();
+    document.body.appendChild(h2);
+
+
+   </script>
+</body>
+
+</html>
