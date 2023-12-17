@@ -1,45 +1,33 @@
 <!DOCTYPE html>
 <html>
 <head>
-        <title>DOM Challenge Index</title>
+  <title>DOM Challenge Index</title>
+  <link rel="stylesheet" type="text/css" href="css-toDoList.css" />
 </head>
 
 <body>
-   <ul>
+  <div class="list-container" id="container">
+    <div id="inputField">
+      <p>Enter a To Do Item and click "Create TODO" to add to your list. </p>
+      <input type="text" id="listInput" placeholder="Enter your to do..." />
+      <button id="add">Create TODO</button><br><br>
+      <button id="remove">Remove TODO</button>
+
+      <p>Enter an Item number, choose a color to highlight a task with the chosen priority color, and indicate to change font to white or not (Y or N).</p>
+      <label for="itemToUpdate">Item Number:</label>
+      <input type="text" id="itemToUpdate" placeholder="Enter your item number..." /><br>
+      <label for="colorpicker">Color Picker:</label>
+      <input type="color" id="colorpicker" value="#0000ff"><br>
+      <br>
+      <label for="fontChange">Font color:</label>
+      <input type="text" id="fontColor" placeholder="Enter Y or N..." maxlength="1"/>
+      <button id="change">Change Priority</button>
 
 
-   </ul>
-
-   <button>Create TODO</button>
-   <button>Remove TODO</button>
-   <button>Change Priority</button>
-
-
-   <script>
-    // Get the body of the document
-    let body = document.getElementsByTagName('body');
-   
-    let currentDate = new Date();
-    let dueDate = new Date();
-
-    dueDate.setDate(dueDate.getDate() + 7); // Set the due date to be one week from now
-    console.log('Today\'s Date is ' + currentDate);
-    console.log(dueDate);
-
-    //Create the h1 as a variable
-    let h1 = document.createElement('h1');
-    //Add content to toDoHeader
-    h1.textContent = 'TODO List';
-    h1.id = 'toDoHeader';
-    //Add toDoHeader to the body section
-    document.body.appendChild(h1);
-
-    let h2 = document.createElement('h2');
-    h2.textContent = 'Due: ' + dueDate.toLocaleDateString();
-    document.body.appendChild(h2);
-
-
-   </script>
+    </div>
+  </div>
+     <script src="toDoList.js"></script>
+ 
 </body>
 
 </html>

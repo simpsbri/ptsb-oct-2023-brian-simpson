@@ -40,7 +40,5 @@
 //
 // ? 5) Extract your Javascript to a separate file linked to the page.
 //
-// ? 6) Create a list of predefined colors for the change priority feature. Update the change function to allow you to pass the predfined color to it and update accordingly.
-//
 // ? 7) You pick something worthy of extra credit!
 //

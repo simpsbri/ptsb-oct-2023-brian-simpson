@@ -1,0 +1,83 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #e3d5ca;
+  }
+
+  .list-container {
+    width: 90%;
+    margin: auto;
+    padding: 20px;
+    /* box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); */
+    /* background-color: #fff; */
+    height: auto; */
+  }
+
+  #inputField {
+    margin-bottom: 20px;
+  }
+
+  input[type="text"] {
+    width: 90%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+  }
+
+  button {
+    display: block;
+    width: 80%;
+    padding: 10px;
+    margin: auto;
+    background-color: #d5bdaf;
+    color: #000;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+
+  button:hover {
+    background-color: #edede9;
+  }
+
+  #toDoHeader {
+    margin-bottom: 10px;
+  }
+
+  #toDoList li {
+    margin-bottom: 15px;
+    padding: 10px;
+    border-radius: 5px;
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+  }
+
+  #toDoList li input[type="checkbox"] {
+    margin-right: 10px;
+  }
+
+ol {
+    counter-reset: list;
+    width: 80%;
+    overflow-x: auto; 
+    float: left;
+    margin: auto;
+    background-color: #d6ccc2;
+  }
+ol > li {
+    list-style: none;
+    margin-bottom: 10px;
+  }
+ol > li:after {
+    content: " (" counter(list) ") ";
+    counter-increment: list;
+  }
+.li:last-child {
+    margin-bottom: 0;
+}
+.error {
+    border: 6px solid red;
+    color: red;
+  }
+h1, h2 {
+    text-align: center;
+}
