@@ -31,20 +31,11 @@
         carModels: ['bmw:x6,m3,m4;ferrari:458,Enzo,scuDeria'],
         carManufacturers: ['bmw', 'ferrari'],
       };
-      //resolve the promise by adding the .thens
+      //resolve the promise by adding the .then
       const myCars = new Promise((resolve, reject) => {
         return resolve(cars);
       });
       myCars.then((carArray) => {
-        console.log(carArray);
-      });
-      myCars.then((carArray) => {
-        const newManufacturers = carArray.carManufacturers.map((word) => {
-          return word[0].toUpperCase() + word.slice(1);
-        });
-        console.log(newManufacturers);
-
-        //model/solution found at https://forum.freecodecamp.org/t/title-case-a-sentence-with-nested-arrays-solved/94568
         const newModels = carArray.carModels.map((model) => {
           return model
             .split(';')
@@ -65,6 +56,11 @@
             .join(';');
         });
         console.log(newModels);
+        // update the corresponding <p> tag
+        const bmwElement = document.querySelector('.bmw');
+        const ferrariElement = document.querySelector('.ferrari');
+        bmwElement.innerHTML = newModels[0];
+        ferrariElement.innerHTML = newModels[1];
       });
     </script>
   </body>
