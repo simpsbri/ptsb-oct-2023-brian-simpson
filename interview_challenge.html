@@ -40,7 +40,9 @@
           return model
             .split(';')
             .map((item) => {
+              //split each of the manufacturers and models into individual "items"
               const [manufacturer, cars] = item.split(':');
+              //split, capitalize the Manufacturer Name and the Model name and then rejoin them.
               return (
                 manufacturer[0].toUpperCase() +
                 manufacturer.slice(1) +
@@ -56,7 +58,7 @@
             .join(';');
         });
         console.log(newModels);
-        // update the corresponding <p> tag
+        // update the corresponding <p> tag (reference - https://www.educative.io/answers/what-are-the-different-ways-to-select-dom-elements-in-javascript)
         const bmwElement = document.querySelector('.bmw');
         const ferrariElement = document.querySelector('.ferrari');
         bmwElement.innerHTML = newModels[0];
