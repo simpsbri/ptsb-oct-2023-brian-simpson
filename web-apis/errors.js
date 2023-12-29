@@ -30,21 +30,21 @@ class pet{};
 
 // Challenge - throw an error when the function gets a pet that they don't have
 // Message - You entered a pet you don't have!
-const getPets = (name) => {
-    // const pets = ['Spot', 'Ginny', 'Steve', 'X'];
+// const getPets = (name) => {
+//     // const pets = ['Spot', 'Ginny', 'Steve', 'X'];
   
-    // const matchedPets = pets.filter((pet) => pet === name);
-    // console.log(matchedPets);
-    // if (!matchedPets.length) {
-         throw new Error('You don\'t have a pet by that name.');
-    // } 
+//     // const matchedPets = pets.filter((pet) => pet === name);
+//     // console.log(matchedPets);
+//     // if (!matchedPets.length) {
+//          throw new Error('You don\'t have a pet by that name.');
+//     // } 
 
-    // console.log(`I have this pet named: ${pets[0]}`);
-    // return pets;
+//     // console.log(`I have this pet named: ${pets[0]}`);
+//     // return pets;
     
-  };
+//   };
 
-  getPets('Don');
+//   getPets('Don');
 
 // ? Try/Catch
 // This can be found across many languages as a sort of "bubble" to "try" some code and if it errors, it will catch it.
@@ -52,6 +52,18 @@ const getPets = (name) => {
 
 // Updating the previous function example with a try/catch
 //
+
+function getPets() {
+  try {
+    throw new Error('There is an issue getting your pets!');
+  }
+  catch (err) {
+    console.log(err);
+    //this is where we can take an additional step based on the error thrown.
+  }
+}
+
+getPets();
 
 // Errors without throwing using try/catch
 // In this example I tried to access a non-existent variable. Since the Javascript errors, even though I didn't throw, the error is passed down to the catch and can be looked at.
@@ -65,6 +77,12 @@ const getPets = (name) => {
 
 // As of later versions of Javascript, you can omit the arguments parenthesis if you'd like but it is not the best practice.
 //
+
+try {
+  //code here
+} catch {
+  //error handling here....
+}
 
 // You will typically have an error handling tool that provides an API calling errors. The tool will then send recorded errors that allow you to setup alerts/data visualizations to see what's going on as your application runs. Imagine if you had 100 errors per second happening. It's good to throw them but we should be alerted about it so we can actively do something to fix it.
 // Error handling is essential in good software design.
