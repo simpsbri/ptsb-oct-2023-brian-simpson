@@ -36,6 +36,7 @@
         return resolve(cars);
       });
       myCars.then((carArray) => {
+        //https://forum.freecodecamp.org/t/title-case-a-sentence-with-nested-arrays-solved/94568 source of idea
         const newModels = carArray.carModels.map((model) => {
           return model
             .split(';')
